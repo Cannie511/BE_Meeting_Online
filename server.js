@@ -21,7 +21,7 @@ io.on('connection', (socket) => {
     console.log('New client connected');
     socket.on('chat message', (msg) => {
         // console.log('message: ' + msg);
-        io.emit('chat message', msg)
+        io.emit('chat message', msg);
     });
     socket.on('join-room',(roomId, userId)=>{
         console.log(roomId, userId)

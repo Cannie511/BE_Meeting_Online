@@ -130,7 +130,7 @@
         call.on('close',()=>{
             remoteVideo.remove()
         })
-        peers[userId]=call
+        peers[userId]=call;
     }
     function addVideoStream(video, stream){
         if(stream){
