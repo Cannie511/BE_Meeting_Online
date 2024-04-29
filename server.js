@@ -2,13 +2,12 @@ const express = require('express');
 const socketIo = require('socket.io');
 const { createServer } = require('http');
 const app = express();
-const port  = 3000;
 const server = createServer(app)
 const { Server } = require("socket.io");
 const io = socketIo(server)
 const { v4: uuidV4 } = require('uuid')
 //import libs
-
+const PORT = 5000 || 8088;
 app.set('view engine', 'ejs');
 app.use(express.static('public'))
 app.get('/', (req,res)=>{
@@ -34,6 +33,6 @@ io.on('connection', (socket) => {
     })
     
 });
-server.listen(port,()=>{
-    console.log(`socket is running on port ${port}`)
+server.listen(PORT,()=>{
+    console.log(`socket is running on port ${PORT}`)
 })
