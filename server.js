@@ -7,7 +7,7 @@ const { Server } = require("socket.io");
 const io = socketIo(server)
 const { v4: uuidV4 } = require('uuid')
 //import libs
-const PORT = 5000 || 8088;
+const PORT = process.env.PORT || 5000;
 app.set('view engine', 'ejs');
 app.use(express.static('public'))
 app.get('/', (req,res)=>{
