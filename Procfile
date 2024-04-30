@@ -1,3 +1,3 @@
 
-web: peerjs --port $PORT
-worker: npm start
+web: npm start
+worker: peerjs --port $PORT
