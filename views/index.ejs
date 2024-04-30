@@ -74,7 +74,16 @@
         })
         socket.on('user-connected',(userId)=>{
             console.log('new user: ',userId)
-            connectToNewUser(userId, stream)
+            const id = localStorage.getItem('userId')
+                if(id)
+                {
+                    connectToNewUser(id, stream)
+                    addVideoStream(video, stream)
+                }
+                else{
+                    localStorage.setItem('userId', userId)
+                    connectToNewUser(userId, stream)
+                }
         })
     })
 
