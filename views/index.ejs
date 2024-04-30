@@ -67,7 +67,7 @@
             const video = document.createElement('video');
             call.on('stream', remoteStream=>{
                 console.log(remoteStream)
-                //addVideoStream(video, remoteStream)
+                addVideoStream(video, remoteStream)
             },err=>{
                 console.log(err)
             })
@@ -95,7 +95,6 @@
                     connectToNewUser(id, stream)
                     addVideoStream(video, stream)
                 }
-                    
                 else{
                     localStorage.setItem('userId', userId)
                     connectToNewUser(userId, stream)
