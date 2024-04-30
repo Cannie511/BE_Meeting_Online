@@ -35,8 +35,9 @@
     const socket = io('/');
     const Room_id = "<%= room %>";
     const myPeer = new Peer(undefined,{
-        host:'/',
-        port:'3001',
+        host:'/peerjs-server.herokuapp.com',
+        secure:true,
+        port:443
     });
     const peers = {};
     document.getElementById('inputMessage').addEventListener('keypress', function(event) {
