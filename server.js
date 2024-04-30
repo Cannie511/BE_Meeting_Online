@@ -8,6 +8,13 @@ const io = socketIo(server)
 const { v4: uuidV4 } = require('uuid')
 //import libs
 const PORT = process.env.PORT || 5000;
+var ExpressPeerServer = require("peer").ExpressPeerServer;    
+var options = {
+  debug: true,
+  allow_discovery: true,
+};
+let peerServer = ExpressPeerServer(server, options);
+app.use("/peerjs", peerServer);
 app.set('view engine', 'ejs');
 app.use(express.static('public'))
 app.get('/', (req,res)=>{
