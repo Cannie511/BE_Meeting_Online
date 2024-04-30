@@ -36,3 +36,4 @@ io.on('connection', (socket) => {
 server.listen(PORT,()=>{
     console.log(`socket is running on port ${PORT}`)
 })
+// concurrently \"node server.js\" \"peerjs --port 3001\"
