@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"node server.js\" \"peerjs --port 3001\""
+    "start": "node server.js"
   },
   "author": "Cannie",
   "license": "ISC",
@@ -14,8 +14,7 @@
     "express": "^4.19.2",
     "peerjs": "^1.5.2",
     "socket.io": "^4.7.5",
-    "uuid": "^9.0.1",
-    "concurrently": "^8.2.2"
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
